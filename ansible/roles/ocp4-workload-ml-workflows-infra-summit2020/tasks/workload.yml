@@ -15,11 +15,6 @@
   become: false
   when: ACTION == "create" or ACTION == "provision"
 
-- include_tasks: per_user_workload.yml
-  loop: "{{ range(user_count_start | int, (user_count_start | int) + (user_count | int)) | list }}"
-  loop_control:
-    loop_var: user_num
-
 # Leave this as the last task in the playbook.
 - name: workload tasks complete
   debug:
