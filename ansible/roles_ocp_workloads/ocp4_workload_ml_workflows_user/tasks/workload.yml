@@ -24,7 +24,7 @@
 - name: Pre-setup for user 
   include_tasks: single_user_pre_workload.yml
 
--name: Per-user workload
+- name: Per-user workload
   include_tasks: per_user_workload.yml
 
 
