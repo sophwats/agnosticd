@@ -13,7 +13,7 @@
   vars:
     namespace: "{{ user_project }}"
 
-- name: "Create Jupyter Single User Profile Config Map for Student User {{ user_name }} in project {{ user_name }}"
+- name: "Create Jupyter Single User Profile Config Map for Student User {{ user_name }} in project {{ user_project }}"
   k8s:
     state: "{{ state }}"
     definition: "{{ lookup('template', 'open-data-hub/jupyterhub-single-user-profile-user.configmap.yml.j2') }}"
