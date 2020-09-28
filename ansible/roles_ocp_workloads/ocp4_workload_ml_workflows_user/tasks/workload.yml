@@ -24,13 +24,9 @@
 - name: Pre-setup for user 
   include_tasks: single_user_pre_workload.yml
 
-- include_tasks: per_user_workload.yml
-  loop: "{{ range(user_count_start | int, (user_count_start | int) + (user_count | int)) | list }}"
-  loop_control:
-    loop_var: t_user_num
-  vars:
-    t_user_name: user{{ t_user_num }}
-    t_project_name: "opendatahub-{{ t_user_name }}"
+-name: Per-user workload
+  include_tasks: per_user_workload.yml
+
 
 # Leave this as the last task in the playbook.
 - name: workload tasks complete
