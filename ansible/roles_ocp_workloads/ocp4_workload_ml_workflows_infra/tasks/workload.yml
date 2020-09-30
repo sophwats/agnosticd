@@ -10,10 +10,10 @@
 #  become: false
 #  when: ACTION == "create" or ACTION == "provision"
 
-- name: Installing Serverless
-  import_tasks: ./serverless.yml
-  become: false
-  when: ACTION == "create" or ACTION == "provision"
+#- name: Installing Serverless
+#  import_tasks: ./serverless.yml
+#  become: false
+#  when: ACTION == "create" or ACTION == "provision"
 
 # Leave this as the last task in the playbook.
 - name: workload tasks complete
