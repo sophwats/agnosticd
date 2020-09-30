@@ -5,10 +5,10 @@
   become: false
   when: install_storage
 
-- name: Installing Pipelines
-  import_tasks: ./pipelines.yml
-  become: false
-  when: ACTION == "create" or ACTION == "provision"
+#- name: Installing Pipelines
+#  import_tasks: ./pipelines.yml
+#  become: false
+#  when: ACTION == "create" or ACTION == "provision"
 
 - name: Installing Serverless
   import_tasks: ./serverless.yml
