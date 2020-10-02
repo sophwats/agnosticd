@@ -99,7 +99,7 @@
   agnosticd_user_info:
     data:
       web_console_url: "https://{{ r_console_route.resources[0].spec.host }}"
-      jupyter_url: "{{ r_jupyter_route.resources[0].status.apiServerURL }}"
+      jupyter_url: "{{ r_jupyter_route.resources[0].spec.host }}"
 
 # Leave this as the last task in the playbook.
 - name: workload tasks complete
