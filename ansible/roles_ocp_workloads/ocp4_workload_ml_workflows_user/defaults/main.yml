@@ -18,7 +18,7 @@ pipeline_notebook_list: 02-feature-engineering.ipynb,03-model-logistic-regressio
 ocs_operator_workload_destroy: "{{ False if (ACTION=='create' or ACTION=='provision') else True }}"
 silent: false
 
-och_project: open-data-hub
+odh_project: open-data-hub
 user_project: user
 workload_destroy: false
 
